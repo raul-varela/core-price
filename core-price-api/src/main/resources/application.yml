@@ -1,0 +1,11 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /price-list
+
+debug: enable
+
+management:
+  health:
+    elasticsearch:
+      enabled: false
