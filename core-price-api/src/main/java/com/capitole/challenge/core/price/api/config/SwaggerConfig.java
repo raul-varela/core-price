@@ -23,9 +23,13 @@ import springfox.documentation.spring.web.plugins.Docket;
 public class SwaggerConfig {
 
   private ApiInfo apiInfo() {
-    return new ApiInfo("Challenge Capitole", "Challenge  from Capitole", "1.0", //
-            "Terms of service", new Contact("Raúl Varela", //
-            "---", "varela.raul.adrian@gmail.com"), "License of API", "API license URL", Collections.emptyList());
+    return new ApiInfo("Capitole's Challenge", //
+            "Capitole's Challenge", //
+            "1.0", //
+            "Terms of service", //
+            new Contact("Raúl Varela", "---", "varela.raul.adrian@gmail.com"), //
+            "License of API", "API license URL", //
+            Collections.emptyList());
   }
 
 
