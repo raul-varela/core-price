@@ -12,6 +12,8 @@
 ## H2
 ```
 BASE_URL: http://localhost:8082
+or
+BASE_URL: https://core-price-production.up.railway.app/
 ```
 
 {BASE_URL}/price-list/h2/h2-console/
