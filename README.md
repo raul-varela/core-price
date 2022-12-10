@@ -106,3 +106,12 @@ curl --location --request POST '{BASE_URL}/price-list/api/v1/price/getPriceByPro
 | Header     | Type       | Description                |
 |:-----------|:-----------| :------------------------- |
 | `Authorization` | `string`   | **Required**.  |
+
+
+## Docker
+
+```
+docker build . -t challenge:v1.0
+
+docker run -itd --name challenge -p 8082:8082 challenge:v1.0
+```
