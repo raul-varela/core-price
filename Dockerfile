@@ -20,7 +20,7 @@ COPY --from=build /home/app/core-price-api/target/core-price-api.jar /app/challe
 
 WORKDIR /app
 ENV VIRTUAL_HOST=challenge
-ENV VIRTUAL_PORT=8082
+ENV VIRTUAL_PORT=8080
 EXPOSE ${VIRTUAL_PORT}/tcp
 ENV spring.application.name=challenge
 ENTRYPOINT ["java","-jar","/app/challenge.jar","--server.port=${VIRTUAL_PORT}"]
