@@ -7,7 +7,9 @@
 
 - [view project](https://github.com/users/raul-varela/projects/1)
 
+## Deployed on Railway
 
+- [core-price](https://core-price-production-04f2.up.railway.app/price-list/swagger-ui/index.html)
 
 ## H2
 ```
