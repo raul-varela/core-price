@@ -25,6 +25,13 @@ spring:
     username: challenge
     password: challenge
 
+  flyway:
+    user: challenge
+    password: challenge
+    url: jdbc:h2:mem:price-db
+    #    locations: classpath:../../../../config/db.migration
+    enabled: true
+
   jpa:
     hibernate:
       dialect: org.hibernate.dialect.H2Dialect
