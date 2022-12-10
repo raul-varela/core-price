@@ -23,8 +23,9 @@ import springfox.documentation.spring.web.plugins.Docket;
 public class SwaggerConfig {
 
   private ApiInfo apiInfo() {
-    return new ApiInfo("MyApp Rest APIs", "APIs for MyApp.", "1.0", "Terms of service", new Contact("test", //
-            "www.org.com", "test@emaildomain.com"), "License of API", "API license URL", Collections.emptyList());
+    return new ApiInfo("Challenge Capitole", "Challenge  from Capitole", "1.0", //
+            "Terms of service", new Contact("Raúl Varela", //
+            "---", "varela.raul.adrian@gmail.com"), "License of API", "API license URL", Collections.emptyList());
   }
 
 
