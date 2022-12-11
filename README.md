@@ -210,11 +210,19 @@ curl --location --request POST '{BASE_URL}/price-list/api/v1/price/getPriceByPro
 
 ![](docs/pics/actuator-endpoint-1.png)
 
+## Docker Hub
 
-## Docker
+* [My Registry Docker](https://hub.docker.com/repository/docker/varelaraul/challenge) 
+
+
+![](docs/pics/docker-hub.png)
 
 ```
-docker build . -t challenge:v1.0
+docker build . -t varelaraul/challenge:v1.0.3
 
-docker run -itd --name challenge -p 8082:8082 challenge:v1.0
+docker push varelaraul/challenge:v1.0.3
+
+docker run -itd --name challenge -p 8082:8082 challenge:v1.0.3
+
+docker pull varelaraul/challenge:v1.0
 ```
