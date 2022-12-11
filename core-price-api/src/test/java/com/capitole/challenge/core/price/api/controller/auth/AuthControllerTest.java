@@ -17,7 +17,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
 
-import com.capitole.challenge.core.price.security.domain.ERole;
 import com.capitole.challenge.core.price.security.domain.User;
 import com.capitole.challenge.core.price.security.service.IAuthService;
 import com.capitole.challenge.core.price.util.dto.security.JwtResponse;
@@ -38,7 +37,8 @@ class AuthControllerTest {
     LoginRequest loginRequest =
             LoginRequest.builder().username("challenge").password("abcdefg").build();
 
-    when(authService.authenticateUser(loginRequest)).thenThrow(BadCredentialsException.class);
+    when(authService.authenticateUser(loginRequest))
+            .thenThrow(new BadCredentialsException("Bad credentials"));
 
     assertThrows(
             BadCredentialsException.class, () -> authController.authenticateUser(loginRequest));
@@ -49,23 +49,21 @@ class AuthControllerTest {
   void authenticateUserWhenUserIsAuthenticatedThenReturnJwtResponse() {
     LoginRequest loginRequest =
             LoginRequest.builder().username("challenge").password("abcdefg").build();
-
     User user =
             User.builder()
                     .id(1L)
                     .username("challenge")
                     .email("challenge@capitole.es")
-                    .password("abcdefg")
+                    .password("$2a$10$slYQmyNdGzTn7ZLBXBChFOC9f6kFjAqPhccnP6DxlWXx2lPk1C3G6")
                     .roles(new HashSet<>())
                     .build();
-
     JwtResponse jwtResponse =
             JwtResponse.builder()
                     .token("token")
                     .id(1L)
                     .username("challenge")
                     .email("challenge@capitole.es")
-                    .roles(List.of(ERole.ROLE_ADMIN.toString()))
+                    .roles(List.of("ROLE_USER"))
                     .build();
 
     when(authService.authenticateUser(loginRequest)).thenReturn(jwtResponse);
