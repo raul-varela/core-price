@@ -24,8 +24,8 @@ public class WebSecurityConfig { // extends WebSecurityConfigurerAdapter {
 
   private static final String[] AUTH_WHITELIST = {
           "/api/auth/**", // auth signin & signon
-
           "/h2/**", // H2 Console
+          "/actuator/**", // actuator
           "/swagger-resources/**", //swagger
           "/swagger-ui/**", //swagger
           "/v3/api-docs/**" //swagger
@@ -82,4 +82,6 @@ public class WebSecurityConfig { // extends WebSecurityConfigurerAdapter {
 
     return http.build();
   }
+
+
 }

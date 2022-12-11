@@ -143,8 +143,8 @@ curl --location --request GET '{BASE_URL}/price-list/api/test/admin' \
 
 # Test 1: petición a las 10:00 del día 14 del producto 35455   para la brand 1 (ZARA)
 
-curl --location --request POST 'http://localhost:8082/price-list/api/v1/price/getPriceByProductAndDate' \
---header 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaGFsbGVuZ2UiLCJpYXQiOjE2NzA3NzI3OTIsImV4cCI6MTY3MDg1OTE5Mn0.e9CNMBSkou-rvs8Kr5wgGi3YQ_BFyxgpKWTxAu94Bvv5bqUGcR7GrR-w6E4jxgp-VspOkovQtpeAJREQCrO4Xg' \
+curl --location --request POST '{BASE_URL}/price-list/api/v1/price/getPriceByProductAndDate' \
+--header 'Authorization: Bearer {access_token}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 "brandId": "1",
@@ -155,8 +155,8 @@ curl --location --request POST 'http://localhost:8082/price-list/api/v1/price/ge
 Test 2: petición a las 16:00 del día 14 del producto 35455   para la brand 1 (ZARA)
 
 
-curl --location --request POST 'http://localhost:8082/price-list/api/v1/price/getPriceByProductAndDate' \
---header 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaGFsbGVuZ2UiLCJpYXQiOjE2NzA3NzI3OTIsImV4cCI6MTY3MDg1OTE5Mn0.e9CNMBSkou-rvs8Kr5wgGi3YQ_BFyxgpKWTxAu94Bvv5bqUGcR7GrR-w6E4jxgp-VspOkovQtpeAJREQCrO4Xg' \
+curl --location --request POST '{BASE_URL}/price-list/api/v1/price/getPriceByProductAndDate' \
+--header 'Authorization: Bearer {access_token}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 "brandId": "1",
@@ -167,8 +167,8 @@ curl --location --request POST 'http://localhost:8082/price-list/api/v1/price/ge
 Test 3: petición a las 21:00 del día 14 del producto 35455   para la brand 1 (ZARA)
 
 
-curl --location --request POST 'http://localhost:8082/price-list/api/v1/price/getPriceByProductAndDate' \
---header 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaGFsbGVuZ2UiLCJpYXQiOjE2NzA3NzI3OTIsImV4cCI6MTY3MDg1OTE5Mn0.e9CNMBSkou-rvs8Kr5wgGi3YQ_BFyxgpKWTxAu94Bvv5bqUGcR7GrR-w6E4jxgp-VspOkovQtpeAJREQCrO4Xg' \
+curl --location --request POST '{BASE_URL}/price-list/api/v1/price/getPriceByProductAndDate' \
+--header 'Authorization: Bearer {access_token}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 "brandId": "1",
@@ -179,8 +179,8 @@ curl --location --request POST 'http://localhost:8082/price-list/api/v1/price/ge
 Test 4: petición a las 10:00 del día 15 del producto 35455   para la brand 1 (ZARA)
 
 
-curl --location --request POST 'http://localhost:8082/price-list/api/v1/price/getPriceByProductAndDate' \
---header 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaGFsbGVuZ2UiLCJpYXQiOjE2NzA3NzI3OTIsImV4cCI6MTY3MDg1OTE5Mn0.e9CNMBSkou-rvs8Kr5wgGi3YQ_BFyxgpKWTxAu94Bvv5bqUGcR7GrR-w6E4jxgp-VspOkovQtpeAJREQCrO4Xg' \
+curl --location --request POST '{BASE_URL}/price-list/api/v1/price/getPriceByProductAndDate' \
+--header 'Authorization: Bearer {access_token}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 "brandId": "1",
@@ -189,8 +189,8 @@ curl --location --request POST 'http://localhost:8082/price-list/api/v1/price/ge
 }'
 Test 5: petición a las 21:00 del día 16 del producto 35455   para la brand 1 (ZARA)
 
-curl --location --request POST 'http://localhost:8082/price-list/api/v1/price/getPriceByProductAndDate' \
---header 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaGFsbGVuZ2UiLCJpYXQiOjE2NzA3NzI3OTIsImV4cCI6MTY3MDg1OTE5Mn0.e9CNMBSkou-rvs8Kr5wgGi3YQ_BFyxgpKWTxAu94Bvv5bqUGcR7GrR-w6E4jxgp-VspOkovQtpeAJREQCrO4Xg' \
+curl --location --request POST '{BASE_URL}/price-list/api/v1/price/getPriceByProductAndDate' \
+--header 'Authorization: Bearer {access_token}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 "brandId": "1",
@@ -201,6 +201,14 @@ curl --location --request POST 'http://localhost:8082/price-list/api/v1/price/ge
 | Header     | Type       | Description                |
 |:-----------|:-----------| :------------------------- |
 | `Authorization` | `string`   | **Required**.  |
+
+## Actuators
+
+{BASE_URL}/price-list/actuator/
+
+![](docs/pics/actuator-endpoint.png)
+
+![](docs/pics/actuator-endpoint-1.png)
 
 
 ## Docker
