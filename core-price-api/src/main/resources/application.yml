@@ -44,14 +44,18 @@ spring:
         trace: false
         web-allow-others: true
 
-
 management:
-  health:
-    elasticsearch:
-      enabled: false
+  endpoint:
+    health:
+      group:
+        custom:
+          show-components: always
+          show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
-
-      # App Properties
 challenge:
   app:
     jwtSecret: capitole-secret-key
