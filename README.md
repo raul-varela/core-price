@@ -30,16 +30,20 @@ BASE_URL: https://core-price-production.up.railway.app/
 
 ![](docs/pics/h2-console.png)
 
-SELECT * FROM BRANDS
+* SELECT * FROM BRANDS
+
 ![](docs/pics/select-all-brands.png)
 
-SELECT * FROM PRICE_LISTS
+* SELECT * FROM PRICE_LISTS
+
 ![](docs/pics/select-all-pricelist.png)
 
-SELECT * FROM PRODUCTS
+* SELECT * FROM PRODUCTS
+
 ![](docs/pics/select-all-products.png)
 
-SELECT * FROM USERS
+* SELECT * FROM USERS
+
 ![](docs/pics/select-all-users.png)
 
 ## Swagger
