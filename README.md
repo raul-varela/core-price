@@ -9,13 +9,13 @@
 
 ## Deployed on Railway
 
-- [core-price](https://core-price-production-04f2.up.railway.app/price-list/swagger-ui/index.html)
+- [core-price](https://core-price-production-2af9.up.railway.app/price-list/swagger-ui/index.html#/)
 
 ## H2
 ```
 BASE_URL: http://localhost:8082
 or
-BASE_URL: https://core-price-production.up.railway.app/
+BASE_URL: https://core-price-production-2af9.up.railway.app/
 ```
 
 {BASE_URL}/price-list/h2/h2-console/
