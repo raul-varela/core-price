@@ -1,5 +1,5 @@
 services:
-  - name: core-price
+    name: core-price
     dockerfile: Dockerfile
     env:
       MYSQL_ROOT_PASSWORD: yourpassword
